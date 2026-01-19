@@ -108,14 +108,14 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
         <p className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.2em]">
-          © 2026 Atitude Itaguaí • Made with Passion
+          © 2026 Atitude Itaguaí • Feito com Paixão
         </p>
         
         <button 
           onClick={scrollToTop}
           className="flex items-center gap-3 text-zinc-500 hover:text-orange-500 font-black text-[10px] uppercase tracking-widest transition-all group"
         >
-          <span>Scroll to Top</span>
+          <span>Voltar ao Topo</span>
           <div className="w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all">
             <ArrowUp className="w-4 h-4" />
           </div>

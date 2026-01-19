@@ -97,7 +97,7 @@ const Hero = () => {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-30"
       >
-        <span className="text-[10px] uppercase font-black tracking-widest text-white">Scroll</span>
+        <span className="text-[10px] uppercase font-black tracking-widest text-white">Rolar</span>
         <div className="w-px h-10 md:h-12 bg-gradient-to-b from-white to-transparent" />
       </motion.div>
     </section>

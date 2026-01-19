@@ -3,25 +3,25 @@ import { Star, Briefcase } from 'lucide-react';
 
 const VidaVitoriosa = () => {
   return (
-    <section id="vida-vitoriosa" className="py-32 px-6 bg-zinc-900 border-y border-white/5 relative overflow-hidden">
+    <section id="vida-vitoriosa" className="py-24 md:py-32 px-6 bg-zinc-900 border-y border-white/5 relative overflow-hidden">
       {/* Background Decorative */}
       <div className="absolute top-0 right-0 w-[50%] h-full bg-orange-600/5 blur-[150px] rounded-full -z-10" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-zinc-800/50 blur-[100px] rounded-full -z-10" />
       
       <div className="max-w-6xl mx-auto">
         <motion.div 
-          className="text-center mb-24"
+          className="text-center mb-16 md:mb-24"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
         >
-          <span className="px-5 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-500 text-xs font-black tracking-[0.4em] uppercase mb-8 inline-block">
+          <span className="px-5 py-2 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-500 text-[10px] md:text-xs font-black tracking-[0.3em] md:tracking-[0.4em] uppercase mb-8 inline-block">
             Encontros
           </span>
-          <h2 className="text-4xl md:text-7xl font-black mb-8 leading-none tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tight px-4">
             Vida <span className="text-orange-500">Vitoriosa</span> 2026
           </h2>
-          <p className="text-zinc-400 text-xl max-w-2xl mx-auto font-medium">
+          <p className="text-zinc-400 text-base md:text-xl max-w-2xl mx-auto font-medium px-4">
             Um divisor de águas na sua caminhada cristã. Prepare-se para o novo.
           </p>
         </motion.div>

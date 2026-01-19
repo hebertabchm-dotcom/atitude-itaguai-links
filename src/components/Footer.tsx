@@ -9,28 +9,28 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-zinc-950 pt-32 pb-12 px-6 border-t border-white/5 relative overflow-hidden">
+    <footer className="bg-zinc-950 pt-24 md:pt-32 pb-12 px-6 border-t border-white/5 relative overflow-hidden">
       {/* Decorative Blur */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-orange-950/20 blur-[120px] rounded-full -z-10" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-20 md:mb-24">
         {/* Church Identity */}
-        <div className="flex flex-col gap-8 lg:col-span-1">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left gap-8 lg:col-span-1">
           <div className="flex items-center gap-4 group">
             <div className="relative">
               <div className="absolute inset-0 bg-orange-500 blur-lg opacity-20 group-hover:opacity-40 transition-opacity rounded-full" />
               <img 
                 src={logoCircle} 
                 alt="Atitude Itaguai" 
-                className="h-20 w-20 rounded-full border-2 border-orange-500 shadow-2xl p-1 bg-zinc-900 relative z-10 transition-transform group-hover:rotate-12"
+                className="h-16 md:h-20 w-16 md:w-20 rounded-full border-2 border-orange-500 shadow-2xl p-1 bg-zinc-900 relative z-10 transition-transform group-hover:rotate-12"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-white font-black text-2xl uppercase tracking-tighter leading-none">Atitude</span>
-              <span className="text-orange-500 font-bold text-sm uppercase tracking-widest pl-0.5">Itaguaí</span>
+              <span className="text-white font-black text-xl md:text-2xl uppercase tracking-tighter leading-none">Atitude</span>
+              <span className="text-orange-500 font-bold text-xs md:text-sm uppercase tracking-widest pl-0.5">Itaguaí</span>
             </div>
           </div>
-          <p className="text-zinc-400 leading-relaxed text-sm font-medium">
+          <p className="text-zinc-400 leading-relaxed text-sm font-medium max-w-xs md:max-w-none">
             Uma igreja relevante, apaixonada por Deus e comprometida com a transformação de vidas na cidade de Itaguaí.
           </p>
           <div className="flex gap-4">

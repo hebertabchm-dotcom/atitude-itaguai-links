@@ -3,16 +3,16 @@ import { BookOpen, Flame, ArrowUpRight } from 'lucide-react';
 
 const TrainingCourses = () => {
   return (
-    <section id="formacao" className="py-32 px-6 max-w-7xl mx-auto">
+    <section id="formacao" className="py-24 md:py-32 px-6 max-w-7xl mx-auto">
       <motion.div 
-        className="text-center mb-24"
+        className="text-center mb-16 md:mb-24"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <span className="text-orange-500 font-black uppercase tracking-[0.4em] text-xs mb-4 inline-block">Liderança & Fé</span>
-        <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">Cursos de <span className="text-gradient">Formação</span></h2>
-        <p className="text-zinc-400 text-lg max-w-xl mx-auto leading-relaxed">
+        <span className="text-orange-500 font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[10px] md:text-xs mb-4 inline-block">Liderança & Fé</span>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight px-4">Cursos de <span className="text-gradient">Formação</span></h2>
+        <p className="text-zinc-400 text-base md:text-lg max-w-xl mx-auto leading-relaxed px-4">
           Capacitação teológica e prática para você servir ao Senhor com excelência e paixão.
         </p>
       </motion.div>

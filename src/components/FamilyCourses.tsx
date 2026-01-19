@@ -30,19 +30,19 @@ const courses = [
 
 const FamilyCourses = () => {
   return (
-    <section id="cursos" className="py-32 px-6 max-w-7xl mx-auto relative">
+    <section id="cursos" className="py-24 md:py-32 px-6 max-w-7xl mx-auto relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-orange-600/5 blur-[120px] rounded-full -z-10" />
       
       <motion.div 
-        className="text-center mb-20"
+        className="text-center mb-16 md:mb-20"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <h3 className="text-orange-500 font-black uppercase tracking-[0.3em] text-sm mb-4">Investimento</h3>
-        <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">Cursos da <span className="text-gradient">Família 2026</span></h2>
+        <h3 className="text-orange-500 font-black uppercase tracking-[0.3em] text-[10px] md:text-sm mb-4">Investimento</h3>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 tracking-tight leading-tight">Cursos da <span className="text-gradient">Família 2026</span></h2>
         <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full mb-8" />
-        <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+        <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto px-4">
           Crescimento espiritual e emocional para todas as fases da vida. Escolha o seu caminho hoje.
         </p>
       </motion.div>

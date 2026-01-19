@@ -29,8 +29,8 @@ const Hero = () => {
           {/* Floating Branding Icon */}
           <motion.div 
             className="absolute -top-10 -right-10 h-24 w-24 rounded-full glass p-1 shadow-2xl hidden lg:block"
-            animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
             <div className="absolute inset-0 bg-orange-500 blur-xl opacity-20 rounded-full" />
             <img src={logoCircle} className="h-full w-full rounded-full object-cover border border-orange-500/30" alt="Icon" />

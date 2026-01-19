@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, MapPin, Calendar, ArrowUp } from 'lucide-react';
 import logoCircle from '../assets/logo-circle.jpg';

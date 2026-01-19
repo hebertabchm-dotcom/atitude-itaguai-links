@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import yearlyMessage from '../assets/yearly-message.png';
 import logoCircle from '../assets/logo-circle.jpg';

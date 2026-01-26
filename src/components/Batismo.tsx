@@ -70,24 +70,24 @@ const Batismo = () => {
                 
                 <div>
                   <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tighter">
-                    O Próximo <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Passo de Fé</span>
+                    Celebrando a Sua <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Vida Nova</span>
                   </h2>
                   <p className="text-zinc-400 text-lg md:text-xl leading-relaxed font-medium">
-                    O batismo é a declaração pública da sua nova vida em Cristo. Um momento sagrado de sepultamento do passado e ressurreição para o propósito de Deus.
+                    O batismo é uma festa! É o momento de declarar com alegria que você pertence a Jesus e começar uma caminhada cheia de esperança, luz e propósito.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/5 group hover:border-cyan-500/30 transition-colors">
                     <Sparkles className="w-5 h-5 text-cyan-400 mb-2" />
-                    <p className="text-white font-bold text-sm">Identidade</p>
-                    <p className="text-zinc-500 text-xs">Pertença a Cristo</p>
+                    <p className="text-white font-bold text-sm">Alegria</p>
+                    <p className="text-zinc-500 text-xs">Festa no Céu</p>
                   </div>
                   <div className="p-4 rounded-2xl bg-white/5 border border-white/5 group hover:border-blue-500/30 transition-colors">
                     <Droplets className="w-5 h-5 text-blue-400 mb-2" />
-                    <p className="text-white font-bold text-sm">Purificação</p>
-                    <p className="text-zinc-500 text-xs">Nova Criatura</p>
+                    <p className="text-white font-bold text-sm">Novidade</p>
+                    <p className="text-zinc-500 text-xs">Tudo se fez Novo</p>
                   </div>
                 </div>
               </div>
@@ -128,10 +128,10 @@ const Batismo = () => {
                 Batismo 2026
               </span>
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
-                Você está pronto para <br className="hidden md:block" /> dar esse testemunho?
+                Vamos celebrar <br className="hidden md:block" /> essa vitória juntos?
               </h3>
               <p className="text-zinc-400 text-lg max-w-lg mx-auto lg:mx-0">
-                Não importa o quão longe você esteve, o Batismo é o convite de Deus para recomeçar com Ele. Inscreva-se para a nossa próxima celebração.
+                O céu está em festa por você! O batismo é o seu "sim" mais feliz para Deus. Garanta sua vaga na nossa próxima celebração e viva esse momento extraordinário.
               </p>
             </div>
 

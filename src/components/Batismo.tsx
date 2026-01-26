@@ -15,7 +15,6 @@ const Batismo = () => {
 
   return (
     <section ref={ref} id="batismo" className="relative min-h-[95vh] flex items-center justify-center py-24 md:py-32 px-6 overflow-hidden">
-      {/* Immersive Parallax Background */}
       <div className="absolute inset-0 z-0">
         <motion.img 
           style={{ y }}
@@ -23,14 +22,12 @@ const Batismo = () => {
           className="w-full h-[120%] object-cover object-center" 
           alt="Batismo" 
         />
-        {/* Advanced Layered Overlays */}
         <div className="absolute inset-0 bg-zinc-950/85 backdrop-blur-[1px] z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/40 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950 z-10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(6,182,212,0.15),transparent_50%)] z-10" />
       </div>
 
-      {/* Celebratory Floating Elements */}
       <div className="absolute inset-0 z-20 pointer-events-none">
         {[...Array(12)].map((_, i) => (
           <motion.div
@@ -39,8 +36,8 @@ const Batismo = () => {
             style={{
               width: Math.random() * 300 + 100,
               height: Math.random() * 300 + 100,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `\${Math.random() * 100}%`,
+              top: `\${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0],
@@ -58,6 +55,7 @@ const Batismo = () => {
 
       <div className="max-w-7xl mx-auto relative z-30 w-full">
         <div className="flex flex-col items-center lg:items-start max-w-4xl">
+          
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

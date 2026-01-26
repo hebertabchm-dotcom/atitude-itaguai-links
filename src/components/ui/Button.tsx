@@ -39,14 +39,13 @@ const Button = ({
         px-10 md:px-12 py-4 md:py-5 rounded-2xl md:rounded-[1.5rem] 
         font-black text-[10px] md:text-xs uppercase tracking-[0.3em] 
         transition-all duration-500 overflow-hidden text-center
-        ${variants[variant]}
-        ${className}
+        \${variants[variant]}
+        \${className}
       `}
     >
       <span className="relative z-10">{label}</span>
       {Icon && <Icon className="w-4 h-4 md:w-5 md:h-5 relative z-10 transition-transform group-hover:translate-x-1" />}
       
-      {/* Universal Interaction Backdrop Mask */}
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </motion.a>
   );

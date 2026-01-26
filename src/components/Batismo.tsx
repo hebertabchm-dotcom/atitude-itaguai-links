@@ -147,10 +147,10 @@ const Batismo = () => {
               </a>
               
               <div className="flex items-center gap-4 py-2">
-                <div className="flex -space-x-3">
-                  {[1,2,3].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-zinc-950 bg-zinc-800 flex items-center justify-center overflow-hidden">
-                       <div className="w-full h-full bg-gradient-to-br from-cyan-500/40 to-blue-500/40" />
+                <div className="flex -space-x-2">
+                  {[Sparkles, Droplets, ArrowRight].map((Icon, i) => (
+                    <div key={i} className="w-10 h-10 rounded-full border border-cyan-500/30 bg-zinc-900 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+                       <Icon className="w-4 h-4 text-cyan-500" />
                     </div>
                   ))}
                 </div>

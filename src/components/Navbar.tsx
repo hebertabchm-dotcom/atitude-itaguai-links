@@ -10,6 +10,7 @@ const Navbar = () => {
     { name: 'Cursos 2026', href: '#cursos' },
     { name: 'Vida Vitoriosa', href: '#vida-vitoriosa' },
     { name: 'Formação', href: '#formacao' },
+    { name: 'Batismo', href: '#batismo' },
   ];
 
   return (

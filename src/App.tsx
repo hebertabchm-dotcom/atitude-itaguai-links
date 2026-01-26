@@ -14,8 +14,8 @@ function App() {
         <Hero />
         <FamilyCourses />
         <VidaVitoriosa />
-        <Batismo />
         <TrainingCourses />
+        <Batismo />
       </main>
       <Footer />
     </div>

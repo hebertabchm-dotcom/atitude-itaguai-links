@@ -35,7 +35,7 @@ const Navbar = () => {
           ${scrolled ? 'bg-zinc-950/80 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)]' : 'bg-white/5 shadow-2xl'}
         `}
       >
-        {/* Brand Section - Restored Orange */}
+        {/* Brand Section - Restored Orange Branding */}
         <div className="flex items-center gap-4">
           <motion.div
             whileHover={{ scale: 1.05, rotate: 5 }}
@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Desktop Menu - Refined & Modern */}
+        {/* Desktop Menu - Modern Technological Refinement */}
         <div className="hidden lg:flex items-center gap-1 bg-zinc-950/20 p-1.5 rounded-full border border-white/5 backdrop-blur-3xl shadow-inner">
           {navLinks.map((link) => (
             <a
@@ -67,13 +67,14 @@ const Navbar = () => {
               className="relative px-7 py-2.5 rounded-full text-zinc-400 font-black text-[10px] uppercase tracking-[0.2em] hover:text-white transition-all duration-500 group overflow-hidden"
             >
               <span className="relative z-10 group-hover:tracking-[0.3em] transition-all duration-500">{link.name}</span>
+              {/* Modern Liquid Hover Effect */}
               <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-10 scale-95 group-hover:scale-100 transition-all duration-500 rounded-full" />
               <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-orange-500 group-hover:w-1/2 transition-all duration-500 rounded-full" />
             </a>
           ))}
         </div>
 
-        {/* Global Actions - Redesigned Tech Look */}
+        {/* Global Actions - Technological Brand Touch */}
         <div className="flex items-center gap-3">
           <motion.a 
             href="https://www.instagram.com/atitude.itaguai/" 
@@ -87,7 +88,7 @@ const Navbar = () => {
             <Instagram className="w-5 h-5 text-zinc-300 group-hover:text-white transition-colors" />
           </motion.a>
 
-          {/* Mobile Tech Toggle */}
+          {/* Mobile Profile/Menu Button */}
           <button 
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-[1.25rem] bg-white/5 text-white border border-white/10 active:scale-90 transition-all duration-300"
@@ -96,7 +97,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Ultra-Modern Mobile Menu */}
+        {/* Mobile Menu Overlay - High-End Design */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -106,7 +107,6 @@ const Navbar = () => {
               transition={{ type: 'spring', damping: 20, stiffness: 100 }}
               className="absolute top-full left-0 right-0 mt-6 p-6 bg-zinc-950/98 backdrop-blur-[50px] border border-white/10 rounded-[2.5rem] shadow-[0_40px_100px_rgba(0,0,0,0.9)] lg:hidden flex flex-col gap-3 z-50 overflow-hidden"
             >
-              {/* Subtle Tech Pattern Background */}
               <div className="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
               
               {navLinks.map((link, i) => (
@@ -117,7 +117,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08 }}
                   onClick={() => setIsOpen(false)}
-                  className="w-full px-8 py-5 rounded-2xl bg-white/5 flex items-center justify-between group active:bg-orange-600 transition-all border border-white/5 active:border-orange-400"
+                  className="w-full px-8 py-5 rounded-2xl bg-white/5 flex items-center justify-between group active:bg-orange-600 transition-all border border-white/5 active:border-orange-400 shadow-sm"
                 >
                   <span className="font-black text-xs uppercase tracking-[0.3em] text-zinc-400 group-active:text-white">
                     {link.name}
@@ -125,6 +125,7 @@ const Navbar = () => {
                   <div className="w-2 h-2 rounded-full bg-orange-600 opacity-0 group-active:opacity-100 transition-opacity shadow-[0_0_10px_rgba(249,115,22,1)]" />
                 </motion.a>
               ))}
+              
               <motion.a 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -135,7 +136,7 @@ const Navbar = () => {
               >
                 <div className="absolute inset-0 bg-white translate-x-full group-hover:translate-x-0 transition-transform duration-500 opacity-20" />
                 <Instagram className="w-5 h-5 relative z-10" />
-                <span className="relative z-10">Conheça nosso Instagram</span>
+                <span className="relative z-10">Nosso Instagram</span>
               </motion.a>
             </motion.div>
           )}

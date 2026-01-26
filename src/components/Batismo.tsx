@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Waves, Heart } from 'lucide-react';
+import { Cloud, Heart } from 'lucide-react';
 import Button from './ui/Button';
 import baptismPool from '../assets/baptism-pool.jpg';
 
@@ -36,8 +36,8 @@ const Batismo = () => {
             style={{
               width: Math.random() * 300 + 100,
               height: Math.random() * 300 + 100,
-              left: `\${Math.random() * 100}%`,
-              top: `\${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0],
@@ -70,7 +70,7 @@ const Batismo = () => {
                 viewport={{ once: true }}
                 className="inline-flex items-center gap-4 px-8 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] md:text-xs font-black tracking-[0.5em] uppercase mx-auto lg:mx-0 shadow-[0_0_30px_rgba(6,182,212,0.1)]"
               >
-                <Waves className="w-5 h-5 animate-pulse" />
+                <Cloud className="w-5 h-5" />
                 <span>O Céu em Festa • 2026</span>
               </motion.div>
 

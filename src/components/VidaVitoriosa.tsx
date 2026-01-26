@@ -27,7 +27,7 @@ const VidaVitoriosa = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Participant Card */}
+          {/* Encontrista Card */}
           <motion.div 
             className="group relative overflow-hidden rounded-[3rem] p-1 shadow-2xl shadow-orange-950/20"
             initial={{ opacity: 0, x: -50 }}
@@ -40,7 +40,7 @@ const VidaVitoriosa = () => {
               <div className="w-16 h-16 bg-white/10 backdrop-blur-xl rounded-2xl flex items-center justify-center mb-8">
                  <Star className="w-8 h-8 text-white fill-white" />
               </div>
-              <h3 className="text-4xl font-black mb-6 tracking-tight">Vou Participar</h3>
+              <h3 className="text-4xl font-black mb-6 tracking-tight">Cadastre-se como Encontrista</h3>
               <p className="text-orange-50/80 text-lg mb-12 flex-grow leading-relaxed font-medium">
                 Quero viver dias inesquecíveis na presença do Senhor e ser transformado por Sua glória.
               </p>
@@ -50,7 +50,7 @@ const VidaVitoriosa = () => {
                 rel="noopener noreferrer"
                 className="bg-white text-orange-600 px-8 py-5 rounded-2xl font-black text-lg text-center shadow-xl hover:shadow-orange-400/20 hover:-translate-y-1 transition-all"
               >
-                Participante
+                Vou ser Encontrista
               </a>
             </div>
           </motion.div>
@@ -66,7 +66,7 @@ const VidaVitoriosa = () => {
               <div className="w-16 h-16 bg-zinc-800 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-orange-500 group-hover:rotate-12 transition-all duration-500">
                  <Briefcase className="w-8 h-8 text-zinc-400 group-hover:text-white transition-colors" />
               </div>
-              <h3 className="text-4xl font-black mb-6 tracking-tight">Vou Trabalhar</h3>
+              <h3 className="text-4xl font-black mb-6 tracking-tight">Cadastre-se como Equipe</h3>
               <p className="text-zinc-400 text-lg mb-12 flex-grow leading-relaxed">
                 Quero servir no Reino e ser instrumento de Deus na vida de outras pessoas nestes dias.
               </p>
@@ -76,7 +76,7 @@ const VidaVitoriosa = () => {
                 rel="noopener noreferrer"
                 className="group/btn relative px-8 py-5 rounded-2xl font-black text-lg text-center overflow-hidden border-2 border-orange-500 text-orange-500"
               >
-                <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">Equipe</span>
+                <span className="relative z-10 group-hover/btn:text-white transition-colors duration-300">Vou servir na Equipe</span>
                 <div className="absolute inset-0 bg-orange-500 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
               </a>
             </div>

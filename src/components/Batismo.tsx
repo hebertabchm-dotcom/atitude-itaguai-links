@@ -137,7 +137,7 @@ const Batismo = () => {
 
             <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
               <a 
-                href="https://www.instagram.com/atitude.itaguai/" 
+                href="https://www.e-inscricao.com/atitudeitaguai/batismofev" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto group relative flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest hover:shadow-[0_0_40px_rgba(6,182,212,0.3)] transition-all overflow-hidden"

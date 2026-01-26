@@ -1,19 +1,38 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import Button from './ui/Button';
 import yearlyMessage from '../assets/yearly-message.png';
 import logoCircle from '../assets/logo-circle.jpg';
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const y2 = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 15]);
+
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-32 overflow-hidden">
-      {/* Dynamic Background Elements */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-600/10 blur-[150px] rounded-full -z-10 animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-900/10 blur-[120px] rounded-full -z-10" />
+    <section ref={ref} className="relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 pb-32 overflow-hidden">
+      {/* Parallax Background Elements */}
+      <motion.div 
+        style={{ y: y1 }}
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-600/10 blur-[150px] rounded-full -z-10 animate-pulse" 
+      />
+      <motion.div 
+        style={{ y: y2 }}
+        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-orange-900/10 blur-[120px] rounded-full -z-10" 
+      />
       
-      <div className="max-w-6xl mx-auto flex flex-col items-center">
+      <div className="max-w-6xl mx-auto flex flex-col items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1, type: "spring" }}
+          style={{ y: y2 }}
           className="mb-8 md:mb-12 relative"
         >
           {/* Main Visual */}
@@ -26,9 +45,10 @@ const Hero = () => {
             />
           </div>
           
-          {/* Floating Branding Icon */}
+          {/* Floating Branding Icon with Parallax Rotation */}
           <motion.div 
             className="absolute -top-10 -right-10 h-24 w-24 rounded-full glass p-1 shadow-2xl hidden lg:block"
+            style={{ rotate }}
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
@@ -72,26 +92,23 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="pt-4 md:pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
           >
-            <a 
+            <Button 
+              label="Ver Cursos 2026" 
               href="#cursos" 
-              className="w-full sm:w-auto group relative bg-white text-zinc-950 px-10 md:px-12 py-4 md:py-5 rounded-2xl font-black text-[10px] md:text-xs uppercase tracking-widest hover:shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all overflow-hidden"
-            >
-              <span className="relative z-10 transition-colors group-hover:text-white">Ver Cursos 2026</span>
-              <div className="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </a>
-            <a 
+              variant="white"
+              className="w-full sm:w-auto"
+            />
+            <Button 
+              label="Conheça Nosso Instagram" 
               href="https://www.instagram.com/atitude.itaguai/" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-10 md:px-12 py-4 md:py-5 rounded-2xl border-2 border-white/10 font-black text-[10px] md:text-xs uppercase tracking-widest text-white hover:bg-white/5 hover:border-white/20 transition-all active:scale-95"
-            >
-              Conheça Nosso Instagram
-            </a>
+              variant="outline"
+              className="w-full sm:w-auto"
+            />
           </motion.div>
         </div>
       </div>
       
-      {/* Scroll indicator - hidden on very small screens to avoid overlaps */}
+      {/* Scroll indicator */}
       <motion.div 
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}

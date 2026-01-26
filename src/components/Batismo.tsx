@@ -1,29 +1,36 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Heart } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { Sparkles, Heart } from 'lucide-react';
+import Button from './ui/Button';
 import baptismPool from '../assets/baptism-pool.jpg';
 
 const Batismo = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   return (
-    <section id="batismo" className="relative min-h-[95vh] flex items-center justify-center py-24 md:py-32 px-6 overflow-hidden">
-      {/* Immersive Background Image with Premium Multi-layer Treatment */}
+    <section ref={ref} id="batismo" className="relative min-h-[95vh] flex items-center justify-center py-24 md:py-32 px-6 overflow-hidden">
+      {/* Immersive Parallax Background */}
       <div className="absolute inset-0 z-0">
         <motion.img 
-          initial={{ scale: 1.1, filter: "blur(0px)" }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 15, ease: "easeOut" }}
+          style={{ y }}
           src={baptismPool} 
-          className="w-full h-full object-cover object-center" 
+          className="w-full h-[120%] object-cover object-center" 
           alt="Batismo" 
         />
-        {/* Advanced Layered Overlays for Ultimate Depth and Legibility */}
-        <div className="absolute inset-0 bg-zinc-950/80 backdrop-blur-[1px] z-10" />
+        {/* Advanced Layered Overlays */}
+        <div className="absolute inset-0 bg-zinc-950/85 backdrop-blur-[1px] z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/40 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950 z-10" />
-        {/* Dynamic Light Overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(6,182,212,0.15),transparent_50%)] z-10" />
       </div>
 
-      {/* Celebratory Floating Elements (Liquid Tech) */}
+      {/* Celebratory Floating Elements */}
       <div className="absolute inset-0 z-20 pointer-events-none">
         {[...Array(12)].map((_, i) => (
           <motion.div
@@ -51,7 +58,6 @@ const Batismo = () => {
 
       <div className="max-w-7xl mx-auto relative z-30 w-full">
         <div className="flex flex-col items-center lg:items-start max-w-4xl">
-          
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +66,6 @@ const Batismo = () => {
             className="flex flex-col gap-10 md:gap-14 text-center lg:text-left"
           >
             <div className="space-y-8 md:space-y-12">
-              {/* Badge - Highlighting Joy & Invitation */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -89,25 +94,13 @@ const Batismo = () => {
               </p>
             </div>
 
-            {/* CTA Area - Ultra-Modern Ornamental Button (Bug Fixed) */}
             <div className="flex flex-col sm:flex-row items-center gap-12 pt-8">
-              <motion.a 
+              <Button 
+                label="Quero me Batizar" 
                 href="https://www.e-inscricao.com/atitudeitaguai/batismofev" 
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, y: -8 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto group relative flex items-center justify-center gap-8 bg-white text-zinc-950 px-16 py-8 md:px-24 md:py-10 rounded-[3rem] font-black text-xs md:text-sm uppercase tracking-[0.5em] shadow-[0_40px_100px_-20px_rgba(255,255,255,0.3)] hover:shadow-[0_50px_120px_-20px_rgba(255,255,255,0.5)] transition-all duration-700 overflow-hidden"
-              >
-                <span className="relative z-10">Quero me Batizar</span>
-                <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-4 transition-transform duration-500" />
-                
-                {/* Ornamental Glass Shine Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                
-                {/* Fixed Background Mask to prevent "Ghosting" - Using only essential layers */}
-                <div className="absolute inset-0 bg-zinc-100 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
-              </motion.a>
+                variant="white"
+                className="w-full sm:w-auto shadow-[0_40px_100px_-20px_rgba(255,255,255,0.3)] !rounded-[3rem] px-16 py-8 md:px-24 md:py-10"
+              />
 
               <div className="flex flex-col gap-3 items-center sm:items-start px-4">
                 <div className="flex items-center gap-4">
@@ -128,8 +121,7 @@ const Batismo = () => {
         </div>
       </div>
 
-      {/* High-End Bottom Tech Divider */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-zinc-950 to-transparent z-40" />
     </section>
   );
 };

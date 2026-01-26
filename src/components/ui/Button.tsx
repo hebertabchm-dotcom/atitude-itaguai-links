@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 interface ButtonProps {
   label: string;
@@ -39,8 +39,8 @@ const Button = ({
         px-10 md:px-12 py-4 md:py-5 rounded-2xl md:rounded-[1.5rem] 
         font-black text-[10px] md:text-xs uppercase tracking-[0.3em] 
         transition-all duration-500 overflow-hidden text-center
-        \${variants[variant]}
-        \${className}
+        ${variants[variant]}
+        ${className}
       `}
     >
       <span className="relative z-10">{label}</span>

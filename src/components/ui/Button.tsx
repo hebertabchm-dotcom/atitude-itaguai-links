@@ -21,7 +21,7 @@ const Button = ({
   const isExternal = href.startsWith('http');
   const anchorProps = isExternal ? { target: target || '_blank', rel: 'noopener noreferrer' } : {};
 
-  const variants = {
+  const buttonVariants = {
     white: "bg-white text-zinc-950 hover:shadow-[0_20px_50px_rgba(255,255,255,0.2)]",
     orange: "bg-orange-600 text-white hover:bg-orange-700 hover:shadow-[0_20px_50px_rgba(249,115,22,0.3)]",
     outline: "border-2 border-white/10 text-white hover:bg-white/5 hover:border-white/20",
@@ -39,7 +39,7 @@ const Button = ({
         px-10 md:px-12 py-4 md:py-5 rounded-2xl md:rounded-[1.5rem] 
         font-black text-[10px] md:text-xs uppercase tracking-[0.3em] 
         transition-all duration-500 overflow-hidden text-center
-        ${variants[variant]}
+        ${buttonVariants[variant] || buttonVariants.white}
         ${className}
       `}
     >
